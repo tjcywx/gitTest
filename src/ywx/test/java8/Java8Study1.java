@@ -23,12 +23,9 @@ public class Java8Study1 {
 
     @Test
     public void test1() {
-        Supplier<String> s1 = () -> {return new Java8Study1().get();};
-        Supplier<String> s2 = () -> new Java8Study1().get();
         Supplier<String> s3 = new Java8Study1()::get;
         System.out.println(s3.get());
 
-        Function<String,String> uo = x -> new Java8Study1().get1(x);
         Function<String,String> f = new Java8Study1()::get1;
         String str1 = f.apply("wenmei");
         System.out.println(str1);
